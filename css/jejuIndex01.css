@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+* { 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+a { text-decoration: none; }
+ul { list-style: none; }
+
+#container {
+    width: 1200px;
+    margin: 0 auto;
+    /* border: solid 5px pink; */
+}
+
+/* ----------------------------
+    header
+ ----------------------------*/
+
+header {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #07c;
+}
+#logo {
+    float: left;
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+#logo a {
+    color: white;
+    font-family: 'Akaya Telivigala', cursive;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100px;
+    display: flex;
+    justify-content: center;
+}
+nav {
+    float: left;
+    width: 65%;
+    margin: 50px 0 0 70px;
+}
+nav > ul {
+    display: inline-flex;
+}
+#topMenu li {
+    padding: 10px 100px 0 50px;
+    height: auto;
+    position: relative;
+}
+#topMenu li:last-child {
+    padding-right: 0px;
+}
+#topMenu li a {
+    color: white;
+    font-weight: bold;
+}
+#topMenu li:hover {
+    color: black;
+}
+#topMenu > li > ul { 
+    visibility: hidden;
+    position: absolute;
+    width: 160px;
+    background: rgba(255,255,255,0.6);
+    margin-top: 20px;
+    padding: 10px 5px;
+}
+#topMenu > li > ul > li {    
+    padding: 10px 10px 10px 30px;   
+}
+#topMenu > li > ul > li > a { 
+    font-size: 14px;   
+    padding: 10px;
+    color: #000;
+    font-weight: normal;  
+}
+#topMenu > li:hover > ul {
+    visibility: visible;
+    z-index: 10;
+}
+#topMenu > li > ul > li:hover > a {
+    color: #f00;
+} 
+/* ----------------------------
+    main
+ ----------------------------*/
+
+main {
+    width: 100%;
+    /* margin: 0 auto; */
+}
+#slideShow {
+    clear: both;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#slides {
+    position: absolute;
+}
+#slideShow img {
+    float: left;
+    width: 100%;
+}
+#contents {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    border-bottom: 2px solid black;
+}
+#tabMenu {
+    float: left;
+    width: 600px;
+    height: 100%;
+    margin-top: 10px;
+}
+#tabMenu input[type="radio"] {
+    display: none; /* 라디오버튼 감춤 */  
+}
+#tabMenu label {
+    display: inline-block; /* 탭 가로 배치 */ 
+    margin: 0;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+    border: 1px solid transparent; /* 테두리 */ 
+}
+#tabMenu label:hover {
+    color: #222;  
+    cursor:pointer;;
+}
+#tabMenu input:checked + label {  
+    /* 활성화된 탭 제목 스타일 */ 
+    color: #07c;
+    border: 1px solid #ddd;
+    background-color: #eee;
+} 
+.tabContent {  
+    /* 탭 내용 스타일 */
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+.tabContent ul p {
+    display: none;
+}
+#notice ul li {
+    list-style: disc;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 2.5;
+}
+#gallery ul li {
+    /* 이미지라서 가로배치 */
+    display: inline; 
+}
+#tab1:checked ~ #notice, 
+#tab2:checked ~ #gallery {
+    display: block;
+}
+#links {
+    float: left;
+    margin: 50px 0 0 20px;
+}
+#links ul {
+    margin-right: 50px;
+    display: inline-block;
+}
+#links ul:last-child {
+    margin-right: 0;
+}
+#links ul li:first-child {
+    width: 150px;
+    height: 150px;
+}
+#links ul li img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+#links ul li:last-child {
+    text-align: center;
+    padding-top: 20px;
+    color: #666666;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+ /* ----------------------------
+    footer
+ ----------------------------*/
+
+footer {
+    clear: both;
+    width: 100%;
+    background-color: white;
+}
+#bottomMenu {
+    width: 100%;
+    height: 50px;
+}
+#bottomNotice {
+    float: left;
+}
+#bottomNotice ul {
+    margin-top: 20px;
+    display: flex;
+}
+#bottomNotice ul li {
+    padding: 0 20px 0 20px;
+    border-right: 1px solid #ddd;
+}
+#bottomNotice ul li a {
+    color: #646464;
+}
+#snsLink {
+    float: right;
+}
+#snsLink ul {
+    margin: 20px 20px 0 0;
+    display: flex;
+}
+#addr {
+    clear: both;
+}
+#addr ul {
+    display: flex;
+}
+#addr ul li {
+    color: gray;
+    font-size: 0.9em;
+    padding: 0 20px 0 20px;
+    border-right: 1px solid #ddd;
+}
+#addr ul li:last-child {
+    border: none;
+}

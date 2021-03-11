@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/*-------------------------------------*/
+/*google web font*/
+/*-------------------------------------*/
+
+/* Akaya Telivigala */
+@font-face {
+    font-family: "Akaya Telivigala";
+    src: url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+    font-style: normal;
+    font-weight: normal;
+    unicode-range: U+1E00-1FFF;
+}

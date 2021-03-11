@@ -1,0 +1,39 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #eee;
+   font-size: 16px;
+}
+h1 {
+   margin: 0;
+   padding-top: 50px;
+}
+#wrapper {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   grid-gap: 1rem;
+}
+
+header {
+   height: 200px;
+   text-align: center;
+   background-color: #d3c1f1;
+   font-size: xx-large;
+   margin-bottom: 30px;
+}
+.card {
+   background-color: #fff;
+   box-shadow: 0px 1px 5px #222;
+}
+.card > section {
+   padding: 0.5rem;
+}
+.card > p {
+   padding: 0.5rem;
+   line-height: 1.6em;
+}
+img {
+   max-width: 100%;
+}

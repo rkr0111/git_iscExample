@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/attribute.css">
+    <title>Attribute Exam</title>
+</head>
+<body>
+    <header>
+        <h2>에디오피아 게뎁</h2>
+    </header>
+
+    <main>
+        <section id="imgSec">
+            <div id="bigImg">
+                <img src="./img/cup/cup01.jpg" alt="에디오피아 게뎁" id="cup" onclick="displayBig()">
+            </div> 
+            <div id="tabImg">
+                <img src="./img/cup/cup02.jpg" class="smallCup">
+                <img src="./img/cup/cup03.jpg" class="smallCup">
+                <img src="./img/cup/cup04.jpg" class="smallCup">
+            </div>
+        </section>
+        <section id="txtSec">
+            <div>
+                <ul id="txtSecUl">
+                    <li>
+                        <span>상품명 : </span><span>에디오피아 게뎁</span>
+                    </li>
+                    <li>
+                        <span>판매가 : </span><span>9,000원</span>
+                    </li>
+                    <li>
+                        <span>배송비 : </span><span>3,000원</span>
+                    </li>
+                    <li>
+                        <span>(50,000원 이상 구매시 무료)</span>
+                    </li>
+                    <li>
+                        <span>적립금 : </span><span>180원 (2%)</span>
+                    </li>
+                    <li>
+                        <span>로스팅 : </span><span>2019.06.17</span>
+                    </li>
+                </ul>
+                <button id="cart" value="장바구니 담기" onclick="cart()">장바구니 담기</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+
+        function cart() {
+            var cart = document.querySelector("#cart");
+            alert("장바구니에 담았습니다.");
+        }
+
+        var cup = document.querySelector("#cup");
+        var smallPic = document.querySelectorAll(".smallCup");
+       
+            for(let i = 0; i < smallPic.length ; i++) {
+                smallPic[i].addEventListener("click", changeBig);
+            }
+            function changeBig() {
+                var newPic = this.src;
+                cup.setAttribute("src", newPic);
+            }
+
+        function displayBig() {
+            cup = document.querySelector("#cup");
+            alert("이미지 소스 : "+ cup.getAttribute("src"));
+        }
+    </script>
+
+</body>
+</html>
